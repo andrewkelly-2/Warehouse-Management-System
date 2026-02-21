@@ -11,7 +11,6 @@ class Organisation:
         print("Welcome to the Organisation!")
         username = input("Enter username: ")
         password = input("Enter password: ")
-        user = self.users.validate_user(username, password)
         try:
             user = self.users.validate_user(username, password)
             user.use(self)
