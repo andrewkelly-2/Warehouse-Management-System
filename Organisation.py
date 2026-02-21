@@ -16,6 +16,7 @@ class Organisation:
             user.use(self)
         except InvalidUserError:
             print("Invalid username or password. Please try again.")
+            self.use()
     
 if __name__ == "__main__":
     seeded_suppliers = Suppliers().seed_data()
