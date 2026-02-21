@@ -5,7 +5,7 @@ class Product:
         self.price = price
         self.stock = initialStock
         self.available = True
-        pass
+        
     
     def get_name(self):
         return self.name

@@ -8,7 +8,16 @@ class Organisation:
         self.users = users
     
     def use(self):
-        pass
+        print("Welcome to the Organisation!")
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        Users.validate_user(username, password)
+        try:
+            user = self.users.validate_user(username, password)
+            user.use(self)
+        except InvalidUserError:
+            print("Invalid username or password. Please try again.")
+            
     
 if __name__ == "__main__":
     seeded_suppliers = Suppliers().seed_data()

@@ -2,11 +2,13 @@ from Order import Order
 
 class Cart:
     def __init__(self, supplier, user):
-        #requires implementation
-        pass
-    
+        self.supplier = supplier
+        self.user = user
+        self.orders = []
+
     def use(self):
         pass
     
     def __str__(self):
-        pass
+        return f"{self.orders}"
+    

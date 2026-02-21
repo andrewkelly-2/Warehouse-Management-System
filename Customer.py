@@ -8,4 +8,5 @@ class Customer(User):
         pass
     
     def __str__(self):
-        pass
+        return f"{self.get_first_name()} {self.get_last_name()}{self.purchases()}"
+    
