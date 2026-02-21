@@ -1,6 +1,10 @@
 class Product:
     def __init__(self, name, price, initialStock):
         #Requires implementation
+        self.name = name
+        self.price = price
+        self.stock = initialStock
+        self.available = True
         pass
     
     def get_name(self):
