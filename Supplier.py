@@ -19,5 +19,8 @@ class Supplier:
     def get_region(self):
         return self.region
     
+    def get_name(self):
+        return self.name    
+    
     def __str__(self):
         return f"{self.name} ({self.region}), {self.address}"
