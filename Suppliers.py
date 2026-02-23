@@ -66,9 +66,9 @@ class Suppliers:
                 print("Exception occured when attempting to seed data.\nHave you implemented the Product constructor and it's additional methods?")
         except:
             print("Exception occured when attempting to seed data.\nHave you implemented the Product constructor and it's additional methods?")
-        self.suppliers.append(Supplier("Hurstville Mega Store", "Hurstville", "12 Forest Road", [seeded_products[0], seeded_products[18], seeded_products[36], seeded_products[14], [seeded_products[32]]]))
-        self.suppliers.append(Supplier("Rocky Dealership", "Rockdale", "46 Real Street", [seeded_products[1], seeded_products[19], seeded_products[37], seeded_products[15], [seeded_products[33]]]))
-        self.suppliers.append(Supplier("Carlton Spare Parts", "Carlton", "49 Carlton Avenue", [seeded_products[2], seeded_products[20], seeded_products[38], seeded_products[16], [seeded_products[34]]]))
-        self.suppliers.append(Supplier("Big Paulies Warehouse", "Heathcote", "1 Princes Highway", [seeded_products[3], seeded_products[21], seeded_products[39], seeded_products[17], [seeded_products[35]]]))
+        self.suppliers.append(Supplier("Hurstville Mega Store", "Hurstville", "12 Forest Road", [seeded_products[0], seeded_products[18], seeded_products[36], seeded_products[14], seeded_products[32]]))
+        self.suppliers.append(Supplier("Rocky Dealership", "Rockdale", "46 Real Street", [seeded_products[1], seeded_products[19], seeded_products[37], seeded_products[15], seeded_products[33]]))
+        self.suppliers.append(Supplier("Carlton Spare Parts", "Carlton", "49 Carlton Avenue", [seeded_products[2], seeded_products[20], seeded_products[38], seeded_products[16], seeded_products[34]]))
+        self.suppliers.append(Supplier("Big Paulies Warehouse", "Heathcote", "1 Princes Highway", [seeded_products[3], seeded_products[21], seeded_products[39], seeded_products[17], seeded_products[35]]))
         #...
         return self
