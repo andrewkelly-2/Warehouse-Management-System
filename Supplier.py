@@ -11,7 +11,12 @@ class Supplier:
         self.profit = 0
     
     def use(self, user):
-        pass
+        print(self)
+        print("available products:")
+        for i, product in enumerate(self.products.get_available_products()):
+            print(f"{i+1}. {product}")
+        print(f"{len(self.products.get_available_products())+1}. Exit")    
+        
     
     def manage(self, user):
         pass

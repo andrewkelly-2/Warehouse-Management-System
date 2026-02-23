@@ -14,7 +14,7 @@ class Product:
         return self.price
     
     def is_available(self):
-        pass
+        return self.available
     
     def has(self, stock):
         return self.stock > stock

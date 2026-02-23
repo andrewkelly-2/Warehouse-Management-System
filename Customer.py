@@ -15,7 +15,17 @@ class Customer(User):
             self.use(org)
         elif choice == "2":
             print(org.suppliers)
-            self.use(org)
+            supplier_choice = input("Enter your choice of supplier (number): ")
+            try:
+                supplier_choice = int(supplier_choice)
+                if 1 <= supplier_choice <= len(org.suppliers.suppliers):
+                    supplier =org.suppliers.suppliers[supplier_choice - 1]
+                    supplier.use(self)
+                    self.use(org)
+            except ValueError:
+                print("Invalid choice. Please try again.")
+                self.use(org)
+                
         elif choice == "3":
             print ("Thank you for visiting! Goodbye!")
             return
