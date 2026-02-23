@@ -7,7 +7,10 @@ class Suppliers:
         self.suppliers = suppliers
 
     def __str__(self):
-        pass
+        result = ""
+        for i, supplier in enumerate(self.suppliers):
+            result += f"{i+1}. {supplier.get_name()} - {supplier.get_region()}\n"
+        return result
     
     def get_by_region(self, region):
         for s in self.suppliers:

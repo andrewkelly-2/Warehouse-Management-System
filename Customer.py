@@ -5,8 +5,21 @@ class Customer(User):
         super().__init__(first_name, last_name, username, password)
     
     def use(self, org):
-        pass
+        print(f"Welcome, {self.get_first_name()} {self.get_last_name()}!")
+        print("1. View Customer Details")
+        print("2. Shop")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            print(self)
+            self.use(org)
+        elif choice == "2":
+            print(org.suppliers)
+            self.use(org)
+        elif choice == "3":
+            print ("Thank you for visiting! Goodbye!")
+            return
     
     def __str__(self):
-        return f"{self.get_first_name()} {self.get_last_name()}{self.purchases()}"
+        return f"{self.get_first_name()} {self.get_last_name()} {self.purchases}"
     
