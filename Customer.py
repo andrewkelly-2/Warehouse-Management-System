@@ -21,7 +21,6 @@ class Customer(User):
                 if 1 <= supplier_choice <= len(org.suppliers.suppliers):
                     supplier =org.suppliers.suppliers[supplier_choice - 1]
                     supplier.use(self)
-                    self.use(org)
             except ValueError:
                 print("Invalid choice. Please try again.")
                 self.use(org)

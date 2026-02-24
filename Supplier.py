@@ -15,7 +15,7 @@ class Supplier:
         print("available products:")
         for i, product in enumerate(self.products.get_available_products()):
             print(f"{i+1}. {product}")
-        print(f"{len(self.products.get_available_products())+1}. Exit")    
+        print(f"{len(self.products.get_available_products())+1} Return to previous menu")    
         
     
     def manage(self, user):
