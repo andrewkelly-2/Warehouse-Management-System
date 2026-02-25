@@ -17,7 +17,7 @@ class Product:
         return self.available
     
     def has(self, stock):
-        return self.stock > stock
+        return self.stock >= stock
     
     def sell(self, amount):
         self.stock -= amount

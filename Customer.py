@@ -1,4 +1,5 @@
 from User import User
+from Cart import Cart
 
 class Customer(User):
     def __init__(self, first_name, last_name, username, password):
@@ -14,13 +15,15 @@ class Customer(User):
             print(self)
             self.use(org)
         elif choice == "2":
+            print("Available suppliers:")
             print(org.suppliers)
             supplier_choice = input("Enter your choice of supplier (number): ")
             try:
                 supplier_choice = int(supplier_choice)
                 if 1 <= supplier_choice <= len(org.suppliers.suppliers):
                     supplier =org.suppliers.suppliers[supplier_choice - 1]
-                    supplier.use(self)
+                    cart = Cart(supplier, self)
+                    supplier.use(self,cart)
             except ValueError:
                 print("Invalid choice. Please try again.")
                 self.use(org)

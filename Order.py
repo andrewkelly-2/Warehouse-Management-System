@@ -5,4 +5,4 @@ class Order:
         self.quantity = quantity
     
     def __str__(self):
-        f"{self.product.get_name} {self.quantity}"
+        return f"{self.product.get_name()} {self.quantity}"
