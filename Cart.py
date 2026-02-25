@@ -12,7 +12,6 @@ class Cart:
     def __str__(self):
         in_my_cart = ""
         for order in self.orders:
-            print("Currently in your cart:")
             in_my_cart += f"{order}\n"
         if in_my_cart == "":
             in_my_cart = "Your cart is empty."

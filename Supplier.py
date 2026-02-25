@@ -24,8 +24,11 @@ class Supplier:
             if pick_a_product == len(available_products)+1:
                 return
             elif pick_a_product == len(available_products)+2:
+                print("Currently in your cart:")
                 print(cart)
-                self.use(user, cart)
+                print("What would you like to do next?\n" \
+                        "1. Continue shopping\n" \
+                        "2. Check out")
             elif 1 <= pick_a_product <= len(available_products):
                 how_many_units = input("How many units would you like to purchase? ")
                 try:
