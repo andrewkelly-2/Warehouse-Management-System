@@ -16,8 +16,23 @@ class Manager(User):
         menu_option_choice = input ("Enter choice: ")
         if menu_option_choice == "1":
             print(self)
+            self.use(org)
         elif menu_option_choice == "2":
-            print(self.suppliers)
+            for i, supplier in enumerate(self.suppliers):
+                print(f"{i+1}. {supplier}")
+            manager_choice_of_supplier = input("Enter the number of the supplier you want to view: ")
+            try:
+                manager_choice_of_supplier = int(manager_choice_of_supplier)
+                if 1 <= manager_choice_of_supplier <= len(self.suppliers):
+                    self.suppliers[manager_choice_of_supplier - 1].view_products()
+                    self.use(org)
+                else:
+                    print("Invalid choice. Please try again.")
+                    self.use(org)
+            except ValueError:
+                print("Please enter a valid number.")
+                self.use(org)
+
         elif menu_option_choice == "3":
             print (f"Logging out {self.first_name} {self.last_name}...")
             return
@@ -25,8 +40,8 @@ class Manager(User):
 
     
     def __str__(self):
-        suppliers = " "
+        result = "Suppliers:\n"
         for one_supplier in self.suppliers:
-            suppliers += f"{one_supplier}\n"
-        return f"{self.get_first_name()} {self.get_last_name()} {suppliers}"
+            result += f"{one_supplier}\n"
+        return f"{self.get_first_name()} {self.get_last_name()}\n{result}"
 

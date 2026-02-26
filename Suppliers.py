@@ -70,5 +70,46 @@ class Suppliers:
         self.suppliers.append(Supplier("Rocky Dealership", "Rockdale", "46 Real Street", [seeded_products[1], seeded_products[19], seeded_products[37], seeded_products[15], seeded_products[33]]))
         self.suppliers.append(Supplier("Carlton Spare Parts", "Carlton", "49 Carlton Avenue", [seeded_products[2], seeded_products[20], seeded_products[38], seeded_products[16], seeded_products[34]]))
         self.suppliers.append(Supplier("Big Paulies Warehouse", "Heathcote", "1 Princes Highway", [seeded_products[3], seeded_products[21], seeded_products[39], seeded_products[17], seeded_products[35]]))
-        #...
+        self.suppliers.append(Supplier("Station Street Shop", "Engadine", "13 Station Street", [
+        seeded_products[4], seeded_products[22], seeded_products[0], seeded_products[18], seeded_products[36]]))
+        self.suppliers.append(Supplier("The Loft(us)", "Loftus", "32A Loftus Avenue", [
+        seeded_products[5], seeded_products[23], seeded_products[1], seeded_products[19], seeded_products[37]
+    ]))
+        self.suppliers.append(Supplier("Sutho Spare Parts", "Sutherland", "14 Existing Street", [
+        seeded_products[6], seeded_products[24], seeded_products[2], seeded_products[20], seeded_products[38]
+    ]))
+        self.suppliers.append(Supplier("Tire City", "Waterfall", "22 Cliff Street", [
+        seeded_products[7], seeded_products[25], seeded_products[3], seeded_products[21], seeded_products[39]
+    ]))
+        self.suppliers.append(Supplier("AutoParts Express", "Mortdale", "66 Wattle Road", [
+        seeded_products[8], seeded_products[26], seeded_products[4], seeded_products[22], seeded_products[16]
+    ]))
+        self.suppliers.append(Supplier("Precision Parts Depot", "Penshurst", "35 Penny Lane", [
+        seeded_products[9], seeded_products[27], seeded_products[5], seeded_products[23], seeded_products[17]
+    ]))
+        self.suppliers.append(Supplier("Car Component Center", "Allawah", "78 Allawah Crescent", [
+        seeded_products[10], seeded_products[28], seeded_products[6], seeded_products[24], seeded_products[18]
+    ]))
+        self.suppliers.append(Supplier("Speedy Spare Solutions", "Kogarah", "20 Forest Road", [
+        seeded_products[11], seeded_products[29], seeded_products[7], seeded_products[25], seeded_products[19]
+    ]))
+        self.suppliers.append(Supplier("Prime Auto Supplies", "Banksia", "102 Banksy Road", [
+        seeded_products[12], seeded_products[30], seeded_products[8], seeded_products[26], seeded_products[20]
+    ]))
+        self.suppliers.append(Supplier("Total Car Parts Hub", "Arncliffe", "77 Arncliffe Place", [
+        seeded_products[13], seeded_products[31], seeded_products[9], seeded_products[27], seeded_products[21]
+    ]))
+        self.suppliers.append(Supplier("DriveLine Parts Warehouse", "Wolli Creek", "99 Princes Highway", [
+        seeded_products[14], seeded_products[32], seeded_products[10], seeded_products[28], seeded_products[22]
+    ]))
+        self.suppliers.append(Supplier("Essential Auto Components", "Sydenham", "44B Metro Way", [
+        seeded_products[15], seeded_products[33], seeded_products[11], seeded_products[29], seeded_products[23]
+    ]))
+        self.suppliers.append(Supplier("Ultimate Parts Source", "Redfern", "56 Rabbitoh Street", [
+        seeded_products[16], seeded_products[34], seeded_products[12], seeded_products[30], seeded_products[24]
+    ]))
+        self.suppliers.append(Supplier("Rapid Repair Parts", "Central", "123 Broadway", [
+        seeded_products[17], seeded_products[35], seeded_products[13], seeded_products[31], seeded_products[25]
+    ]))
+        return self
         return self
