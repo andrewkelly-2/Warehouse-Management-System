@@ -24,6 +24,7 @@ class Customer(User):
                     supplier =org.suppliers.suppliers[supplier_choice - 1]
                     cart = Cart(supplier, self)
                     supplier.use(self,cart)
+                    self.use(org)
             except ValueError:
                 print("Invalid choice. Please try again.")
                 self.use(org)
@@ -33,5 +34,10 @@ class Customer(User):
             return
     
     def __str__(self):
-        return f"{self.get_first_name()} {self.get_last_name()} {self.purchases}"
+        customers_purchases = ""
+        for purchase in self.purchases:
+            customers_purchases += f"{purchase}\n"
+        if customers_purchases == "":
+            customers_purchases = "No purchases yet."
+        return f"{self.get_first_name()} {self.get_last_name()} {customers_purchases}"
     
