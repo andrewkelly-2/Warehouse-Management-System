@@ -56,19 +56,22 @@ class Supplier:
                         item_to_remove = int(item_to_remove)
                         if 1<= item_to_remove <= len(cart.orders):
                             quantity_to_remove = input("Enter the quantity you wish to remove: ")
-                            try:
-                                quantity_to_remove = int(quantity_to_remove)
-                                if quantity_to_remove > cart.orders[item_to_remove-1].quantity:
-                                    print("You don't have that many of that item in your cart.")
-                                    self.use(user, cart)
-                                elif quantity_to_remove <= cart.orders[item_to_remove-1].quantity:
-                                    cart.orders[item_to_remove-1].product.restock(quantity_to_remove)
-                                    cart.orders[item_to_remove-1].quantity -= quantity_to_remove
-                                    if cart.orders[item_to_remove-1].quantity == 0:
-                                        cart.orders.pop(item_to_remove-1)
+                        else:
+                              print("Invalid item number. Please try again.")
+                              self.use(user, cart)
+                        try:
+                            quantity_to_remove = int(quantity_to_remove)
+                            if quantity_to_remove > cart.orders[item_to_remove-1].quantity:
+                                print("You don't have that many of that item in your cart.")
+                                self.use(user, cart)
+                            elif quantity_to_remove <= cart.orders[item_to_remove-1].quantity:
+                                cart.orders[item_to_remove-1].product.restock(quantity_to_remove)
+                                cart.orders[item_to_remove-1].quantity -= quantity_to_remove
+                                if cart.orders[item_to_remove-1].quantity == 0:
+                                    cart.orders.pop(item_to_remove-1)
                                 print("Item(s) removed from cart.")
                                 self.use(user, cart) 
-                            except ValueError:
+                        except ValueError:
                                 print("Invalid quantity.")
                                 self.use(user, cart)
                     except ValueError:
